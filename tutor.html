@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Tutor</title>
+
+
+<style>
+        body 
+    {
+     min-height: 100vh; 
+    }
+
+
+  /* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+
+    
+</style>
+
+<script type="text/javascript">
+	
+	function Checkqual(val)
+      {
+        var element=document.getElementById('qual');
+        if(val=='05'||val=='06')
+          element.style.display='block';
+        else  
+          element.style.display='none';
+      }
+
+    function Checkstatus(val)
+      {
+      	var element=document.getElementById('status');
+      	if(val=='01')
+      		element.style.display='block';
+      	else
+      		element.style.display='none';
+      }
+    function Checkexp(val)
+    {
+      var element=document.getElementById('exp');
+        if(val=='01')
+          element.style.display='block';
+        else
+          element.style.display='none';
+    }
+</script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div style="border: 2px solid black;border-radius: 12px; background-color: white;">
+        <h1 align="center">Brain Sharpener Home Tutors </h1>
+        <p align="center" style="margin-top: -10"><em>Tutor at your doorstep</em></p>
+</div>
+  
+<br>
+<br>
+<div style="border: 2px solid black;border-radius: 12px; width: 40%;background-color: white;padding-right: 120px;">
+  <h2 style="margin-left:10px;">Register yourself as a tutor:</h2>
+  <p style="margin-left:10px; margin-top: -10px;"><em>Register with us as a tutor and get regular updates regarding tuitions near you.</em></p>
+</div>
+<br>
+<br>
+<br>
+
+ <form style="margin-left:10px;">
+
+ 	<label for="name">Full Name</label><br>
+ 	<input type="text" name="name" >
+<br>
+<br>
+	<label for="E-mail">E-mail Address</label><br>
+	<input type="text" name="E-mail">
+
+<br>
+<br>
+	<label for="Phone">Mobile Number</label><br>
+	<input type="text" name="Phone">
+<br>
+<br>
+	<label for="Whatsapp">WhatsApp Number</label><br>
+	<input type="text" name="Whatsapp">
+
+<br>
+<br>
+ 	<label for="age">Age</label><br>
+ 	<input type="text" name="age">
+<br>
+<br>
+	<label for="myfile">Adhar card</label>
+  	<input type="file" id="myfile" name="myfile">
+ <br>
+ <br>
+  	<label for="myfile">Resume/CV</label>
+  	<input type="file" id="myfile" name="myfile">
+<br>
+<br>
+  	
+ 	<select name="exp" onchange="Checkexp(this.value);" >
+        <option value="" selected>-- Prior Experience in Teaching--</option>
+        <option value="01">Yes</option>
+        <option value="02">No</option>
+    </select>
+    <!--Conditional textbox to fetch value from the user for the experience column -->
+  <input type="text" size='50' name="exp" id="exp" style='display:none;' placeholder="Experience in years and months" />  
+ <br>
+ <br>
+ <br>
+    <select name="qual" onchange='Checkqual(this.value);'>
+        <option value="" selected>--Highest Qualification--</option>
+        <option value="01">10th</option>
+        <option value="02">10+2(Arts/Humanities)</option>
+        <option value="03">10+2(Science(Medica/Non-Medical))</option>
+        <option value="04">10+2(Commerce)	</option>
+        <option value="05">Graduation</option>
+        <option value="06">Post Graduation</option>
+    </select>
+    <!--Conditional textbox to fetch value from the user for the qualification column -->
+	<input type="text" size='50' name="qual" id="qual" style='display:none;' placeholder="Name of the degree(for e.g. B.Com, BSc, BCA etc)" />  
+
+	<select name="status" onchange='Checkstatus(this.value);'>
+        <option value="" selected>--Status--</option>
+        <option value="01">Completed</option>
+        <option value="02">Pursuing</option>
+	</select>
+    <!--Conditional textbox to fetch value from the user for the class column -->
+	<input type="text"  name="status" id="status" style='display:none;' placeholder="Percentage" />  
+
+<br>
+<br>
+	<label for="subtea">Subjects you can teach.<br>(Fill only those subjects which matches your qualification or previous experience.)</label><br>
+	<input type="text" size='40' name="subtea" placeholder="Mention the subject(s) separated by comma.">
+
+<br>
+<br>
+	<label for="cls">Class(es) to which you can teach the above mentioned subject(s).<br></label><br>
+	<input type="text" size='40' name="cls" placeholder="Mention the class(es) separated by comma.">
+<br>
+<br>
+
+  <input type="submit" value="Submit">
+
+ </form>
+<br>
+<br>
+<br>
+
+</body>
+</html>
